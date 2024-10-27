@@ -1,11 +1,15 @@
 **AWS Billing and CloudWatch Alarm Setup
+
     -This document provides step-by-step guidance on configuring billing preferences and creating billing alarms in AWS using CloudWatch. This will help you manage AWS expenses by setting up 
     notifications when billing thresholds are exceeded.
 
 **Prerequisites**
+
     -AWS Root User Access: Log in with root user credentials to access and modify billing preferences.
     -AWS Console Access: Ensure you can navigate to Billing and Cost Management and CloudWatch in the AWS Management Console.
+    
 **Steps**
+
 1. Accessing Billing and Cost Management
     -Login with the root user credentials.
     -Click on the Profile Name in the AWS Console, then select Billing and Cost Management from the dropdown.
