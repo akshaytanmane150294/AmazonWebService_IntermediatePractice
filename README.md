@@ -1,27 +1,79 @@
-Setting Up a Billing Alarm in CloudWatch
-Access CloudWatch:
+**AWS Billing and CloudWatch Alarm Setup**
 
-Use the search bar at the top of the AWS Console to search for CloudWatch and select it from the results.
-Create a Billing Alarm:
+    -This document provides step-by-step guidance on configuring billing preferences and creating billing alarms in AWS using CloudWatch. 
+    
+    -This will help you manage AWS expenses by setting up notifications when billing thresholds are exceeded.
 
-In the CloudWatch dashboard, select All Alarms from the left-hand menu.
-Click on the Create Alarm button located in the center of the page (not the right-side "Create Alarm" button, which is for global alarms).
-In the Metrics section, click Select Metric.
-Ensure that your region is set to N. Virginia (us-east-1).
-From the available metrics, select Billing, then choose Total Estimated Charges. Check the box next to the USD currency option and click Select Metric.
-Define Alarm Conditions:
+**Prerequisites**
 
-Set the threshold condition by choosing Greater Than or Equal To and specify a dollar amount for the alarm threshold (e.g., $2 or $5).
-Click Next to proceed.
-Configure Notification Options:
+    -AWS Root User Access: Log in with root user credentials to access and modify billing preferences.
+    
+    -AWS Console Access: Ensure you can navigate to Billing and Cost Management and CloudWatch in the AWS Management Console.
+    
+**Steps**
 
-In the Notification section, select the In Alarm checkbox, then choose Create a Topic.
-Leave the topic name as default, enter your Email ID under the Email Endpoint, and click Create Topic.
-Scroll down and select Next to continue.
-Finalize the Alarm Setup:
-
-In the Alarm Name field, enter a descriptive name for the alarm, then select Next.
-Review the settings and click Create Alarm. Your billing alarm will now be active.
-Confirm Email Subscription:
-
-Check your email for a subscription confirmation message from AWS. Click the Confirm Subscription link to activate email notifications for your billing alarm.
+1. Accessing Billing and Cost Management
+   
+    -Login with the root user credentials.
+   
+    -Click on the Profile Name in the AWS Console, then select Billing and Cost Management from the dropdown.
+   
+    -The billing section will automatically be in global view, so no specific region selection is required.
+   
+3. Configuring Billing Preferences
+   
+    -In the left-hand navigation menu, scroll down to Billing Preferences.
+   
+    -Find the Invoice Delivery Preferences section and click Edit.
+   
+    -Check the box to enable invoice delivery, then click Update.
+   
+    -In the Alert Preferences section (on the right), click Edit.
+   
+    -Check the alert notification checkbox, then enter your preferred email address in the designated field.
+   
+    -Click Update to save your preferences.
+   
+5. Setting Up a Billing Alarm in CloudWatch
+   
+    -Search for CloudWatch in the AWS Console search bar and select it from the results.
+   
+    -In the CloudWatch dashboard, select All Alarms in the left-hand menu.
+   
+    -Create Alarm: Click on the Create Alarm button in the center of the page (avoid using the right-side button, as it is for global alarms).
+   
+7. Defining Alarm Metrics
+   
+    -In the metrics section, click Select Metric.
+   
+    -Ensure your region is set to N. Virginia (us-east-1).
+   
+    -Under Billing, select Total Estimated Charges and check the box beside the USD currency option.
+   
+    -Click Select Metric.
+   
+9. Setting Alarm Conditions
+    
+    -Set the condition to Greater Than or Equal To and enter a threshold value (e.g., $2 or $5).
+   
+    -Click Next.
+   
+11. Configuring Notifications
+    
+    -In the notification section, select In Alarm and choose Create a Topic.
+    
+    -Keep the default topic name, then enter your Email ID in the Email Endpoint field.
+    
+    -Click Create Topic and scroll down to click Next.
+    
+13. Finalizing Alarm Setup
+    
+    -Enter a descriptive name for the alarm in the Alarm Name field.
+    
+    -Click Next to review your settings, then select Create Alarm. The billing alarm is now active.
+    
+15. Confirming Email Subscription
+    
+    -Check your email inbox for a subscription confirmation email from AWS.
+    
+    -Click the Confirm Subscription link in the email to activate notifications for your billing alarm.**
