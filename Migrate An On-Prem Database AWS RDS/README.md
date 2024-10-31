@@ -7,6 +7,7 @@ Connect to the instance via command line:
 bash
 
 **Copy code**
+
     -ssh -i "newkeypair.pem" ubuntu@ec2-54-91-41-189.compute-1.amazonaws.com
 
 **2 Install and Configure MySQL:**
@@ -57,6 +58,7 @@ Install XtraBackup:
 bash
 
 **Copy code**
+
     -sudo apt install percona-xtrabackup
     -xtrabackup --version
 
@@ -65,6 +67,7 @@ Create Backup Directory:
 bash
 
 **Copy code**
+
     -mkdir -p ~/s3-restore/backup
 
 Take MySQL Backup:
@@ -107,6 +110,7 @@ Copy backup files to the S3 bucket:
 bash
 
 **Copy code**
+
     -aws s3 cp ~/s3-restore/backup/ s3://akshay-1209333 --recursive
 
 **6 Restore Backup to RDS:**
@@ -115,15 +119,15 @@ In RDS Console, select Restore from S3 and choose your bucket name.
 
 Select Engine and configure settings:
 
-DB Instance Class:  -db.t3.small
+DB Instance Class:  **-db.t3.small**
 
-DB Cluster Identifier:   -database-test
+DB Cluster Identifier:  **-database-test**
 
-Master Username:  -admin
+Master Username: **-admin**
 
-Password:  -admin12345
+Password:  **-admin12345**
 
-Public Access:  -Yes
+Public Access:  **-Yes**
 
 Configure Security Settings:
 
