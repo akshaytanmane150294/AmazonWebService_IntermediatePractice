@@ -34,7 +34,8 @@ Default Output Format: Choose json or another format if preferred.
 Verify CLI Configuration: Test your CLI setup with:
 
 **bash Copy code**
-    -aws sts get-caller-identity
+
+      -aws sts get-caller-identity
 
       Expected Output:
       
