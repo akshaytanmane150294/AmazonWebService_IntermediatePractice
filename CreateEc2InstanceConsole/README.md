@@ -49,12 +49,15 @@ Copy code
    "Arn": "arn:aws:sts::123456:assumed-role/role-name/role-session-name",
    "UserId": "AR#####:#####"
 }
+
 Launch EC2 Instance via CLI: Use the following command, replacing <Key-Pair-Name> with your Key Pair name:
 
 bash
+
 Copy code
 
 -aws ec2 run-instances --image-id ami-08e4e35cccc6189f4 --count 1 --instance-type t2.micro --key-name <Key-Pair-Name> --security-groups default
+
 This will initiate the creation of an EC2 instance based on your specifications.
 
 
