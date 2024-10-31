@@ -37,6 +37,7 @@ Verify Apache is running:
 bash
 
 **Copy code**
+
     -sudo systemctl status apache2
 
 
@@ -54,6 +55,7 @@ To stop the server:
 bash
 
 **Copy code**
+
     -sudo systemctl stop apache2
 
 
@@ -83,6 +85,7 @@ Launch EC2 Instance:
 Run the following command to create an instance via CLI:
 bash
 **Copy code**
+
     -aws ec2 run-instances --image-id ami-0149b2da6ceec4bb0 --count 1 --instance-type t2.micro --key-name newkeypair --security-groups default
 
 
@@ -99,6 +102,7 @@ Connect via SSH:
 Use SSH to connect:
 bash
 **Copy code**
+
     -ssh -i "newkeypair.pem" ubuntu@ec2-34-238-240-232.compute-1.amazonaws.com
 
 
