@@ -19,36 +19,36 @@ Launch Instance: Review your configurations and click Launch Instance to deploy.
 Using the AWS CLI
 Configure AWS CLI: Start by setting up your AWS CLI credentials using:
 
-bash
-Copy code
+**bash
+Copy code**
 
--aws configure
+   -aws configure
 
-AWS Access Key ID: Enter your Access Key.
-
-AWS Secret Access Key: Enter your Secret Key.
-
-Default Region Name: For example, us-east-1.
+   AWS Access Key ID: Enter your Access Key.
+   
+   AWS Secret Access Key: Enter your Secret Key.
+   
+   Default Region Name: For example, us-east-1.
 
 Default Output Format: Choose json or another format if preferred.
 
 Verify CLI Configuration: Test your CLI setup with:
 
-bash
-Copy code
+**bash
+Copy code**
 
--aws sts get-caller-identity
+   -aws sts get-caller-identity
 
-Expected Output:
-
-json
-
-Copy code
-{
-   "Account": "123456",
-   "Arn": "arn:aws:sts::123456:assumed-role/role-name/role-session-name",
-   "UserId": "AR#####:#####"
-}
+   Expected Output:
+   
+   json
+   
+   Copy code
+   {
+      "Account": "123456",
+      "Arn": "arn:aws:sts::123456:assumed-role/role-name/role-session-name",
+      "UserId": "AR#####:#####"
+   }
 
 Launch EC2 Instance via CLI: Use the following command, replacing <Key-Pair-Name> with your Key Pair name:
 
@@ -56,7 +56,7 @@ bash
 
 Copy code
 
--aws ec2 run-instances --image-id ami-08e4e35cccc6189f4 --count 1 --instance-type t2.micro --key-name <Key-Pair-Name> --security-groups default
+      -aws ec2 run-instances --image-id ami-08e4e35cccc6189f4 --count 1 --instance-type t2.micro --key-name <Key-Pair-Name> --security-groups default
 
 This will initiate the creation of an EC2 instance based on your specifications.
 
